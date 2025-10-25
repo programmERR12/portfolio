@@ -1,0 +1,399 @@
+
+
+
+/* hire me btn */
+
+
+.button {
+  --h-button: 48px;
+  --w-button: 102px;
+  --round: 0.75rem;
+  cursor: pointer;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 0.25s ease;
+  background: radial-gradient(
+      65.28% 65.28% at 50% 100%,
+      rgba(16, 185, 129, 0.8) 0%,     /* emerald glow */
+      rgba(16, 185, 129, 0) 100%
+    ),
+    linear-gradient(0deg, #064e3b, #064e3b); /* dark emerald base */
+  border-radius: var(--round);
+  border: none;
+  outline: none;
+  padding: 12px 18px;
+}
+
+.button::before,
+.button::after {
+  content: "";
+  position: absolute;
+  inset: var(--space);
+  transition: all 0.5s ease-in-out;
+  border-radius: calc(var(--round) - var(--space));
+  z-index: 0;
+}
+
+.button::before {
+  --space: 1px;
+  background: linear-gradient(
+    177.95deg,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.button::after {
+  --space: 2px;
+  background: radial-gradient(
+      65.28% 65.28% at 50% 100%,
+      rgba(16, 185, 129, 0.8) 0%,
+      rgba(16, 185, 129, 0) 100%
+    ),
+    linear-gradient(0deg, #064e3b, #064e3b);
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+/* Fold Effect */
+.fold {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 1rem;
+  width: 1rem;
+  display: inline-block;
+  transition: all 0.5s ease-in-out;
+  background: radial-gradient(
+    100% 75% at 55%,
+    rgba(16, 185, 129, 0.8) 0%,
+    rgba(16, 185, 129, 0) 100%
+  );
+  box-shadow: 0 0 3px black;
+  border-bottom-left-radius: 0.5rem;
+  border-top-right-radius: var(--round);
+}
+
+.fold::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150%;
+  height: 150%;
+  transform: rotate(45deg) translateX(0%) translateY(-18px);
+  background-color: #1e1e24; /* dark gray fold overlay */
+  pointer-events: none;
+}
+
+.button:hover .fold {
+  margin-top: -1rem;
+  margin-right: -1rem;
+}
+
+/* Floating Points */
+.points_wrapper {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.points_wrapper .point {
+  bottom: -10px;
+  position: absolute;
+  animation: floating-points infinite ease-in-out;
+  pointer-events: none;
+  width: 2px;
+  height: 2px;
+  background-color: #10b981; /* emerald particles */
+  border-radius: 9999px;
+}
+
+@keyframes floating-points {
+  0% {
+    transform: translateY(0);
+  }
+  85% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-55px);
+    opacity: 0;
+  }
+}
+
+/* Random particle timing (unchanged) */
+.points_wrapper .point:nth-child(1) { left: 10%; opacity: 1; animation-duration: 2.35s; animation-delay: 0.2s; }
+.points_wrapper .point:nth-child(2) { left: 30%; opacity: 0.7; animation-duration: 2.5s; animation-delay: 0.5s; }
+.points_wrapper .point:nth-child(3) { left: 25%; opacity: 0.8; animation-duration: 2.2s; animation-delay: 0.1s; }
+.points_wrapper .point:nth-child(4) { left: 44%; opacity: 0.6; animation-duration: 2.05s; }
+.points_wrapper .point:nth-child(5) { left: 50%; opacity: 1; animation-duration: 1.9s; }
+.points_wrapper .point:nth-child(6) { left: 75%; opacity: 0.5; animation-duration: 1.5s; animation-delay: 1.5s; }
+.points_wrapper .point:nth-child(7) { left: 88%; opacity: 0.9; animation-duration: 2.2s; animation-delay: 0.2s; }
+.points_wrapper .point:nth-child(8) { left: 58%; opacity: 0.8; animation-duration: 2.25s; animation-delay: 0.2s; }
+.points_wrapper .point:nth-child(9) { left: 98%; opacity: 0.6; animation-duration: 2.6s; animation-delay: 0.1s; }
+.points_wrapper .point:nth-child(10) { left: 65%; opacity: 1; animation-duration: 2.5s; animation-delay: 0.2s; }
+
+.inner {
+  z-index: 2;
+  gap: 6px;
+  position: relative;
+  width: 100%;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  transition: color 0.2s ease-in-out;
+}
+
+.inner svg.icon {
+  width: 18px;
+  height: 18px;
+  transition: fill 0.1s linear;
+}
+
+.button:focus svg.icon {
+  fill: white;
+}
+
+.button:hover svg.icon {
+  fill: transparent;
+  animation:
+    dasharray 1s linear forwards,
+    filled 0.1s linear forwards 0.95s;
+}
+
+@keyframes dasharray {
+  from {
+    stroke-dasharray: 0 0 0 0;
+  }
+  to {
+    stroke-dasharray: 68 68 0 0;
+  }
+}
+
+@keyframes filled {
+  to {
+    fill: #10b981; /* emerald fill when hovered */
+  }
+}
+
+
+.full-link {
+  display: block;       /* makes it behave like a div */
+  width: 100%;          /* takes full width of parent */
+  text-align: center;   /* centers text */
+  color: white;
+
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.full-link:hover {
+ 
+  color: red;
+}
+
+
+
+
+/* nav */
+@keyframes glowLine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+.animate-glowLine {
+  background-size: 200% 200%;
+  animation: glowLine 3s linear infinite;
+  filter: drop-shadow(0 0 8px #22c55e);
+}
+
+/* radar */
+
+
+.loader {
+  position: relative;
+
+  width: 250px;
+  height: 250px;
+  background: #212121;
+  border-radius: 50%;
+  box-shadow: inset 0px 0px 7px seagreen;
+  border: 1px solid seagreen;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.loader::before {
+  content: "";
+  position: absolute;
+  inset: 20px;
+  background: transparent;
+  border: 1px solid seagreen;
+  border-radius: 50%;
+  box-shadow: inset 0px 0px 5px seagreen;
+}
+
+.loader::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid seagreen;
+  box-shadow: inset 0px 0px 3px seagreen;
+}
+
+.loader span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  transform-origin: top left;
+  animation: radar81 2s linear infinite;
+  box-shadow: -25px -75px 30px -50px seagreen;
+  border-top: 2px solid #2e8b57;
+}
+
+.loader span::before {
+  display: none;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15%;
+  height: 100%;
+  background: seagreen;
+  transform-origin: top left;
+  transform: rotate(-90deg);
+  filter: blur(15px) drop-shadow(10px 0px 10px seagreen);
+}
+
+@keyframes radar81 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#dot-1 {
+  --dot-start-top: 100px;
+  --dot-start-left: 140px;
+  --dot-end-top: 130px;
+  --dot-end-left: 20px;
+  --delay: 0s;
+}
+
+#dot-2 {
+  --dot-start-top: 100px;
+  --dot-start-left: 0px;
+  --dot-end-top: -3px;
+  --dot-end-left: 90px;
+  --delay: 0s;
+}
+
+#dot-3 {
+  --dot-start-top: 100px;
+  --dot-start-left: 105px;
+  --dot-end-top: 18px;
+  --dot-end-left: 18px;
+  --delay: 0s;
+}
+
+#dot-4 {
+  --dot-start-top: 110px;
+  --dot-start-left: 150px;
+  --dot-end-top: 140px;
+  --dot-end-left: 30px;
+  --delay: 0s;
+}
+
+#dot-5 {
+  --dot-start-top: -5px;
+  --dot-start-left: 85px;
+  --dot-end-top: 125px;
+  --dot-end-left: 120px;
+  --delay: 4s;
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: var(--dot-start-top);
+  left: var(--dot-start-left);
+  border-radius: 9999px;
+  background: rgba(255, 255, 255);
+  box-shadow: inset 0px 0px 10px 2px rgba(0, 255, 182, 0.5),
+    0px 0px 10px 2px rgba(0, 255, 135, 0.3);
+  -webkit-animation: fly 32s linear infinite;
+  animation-delay: var(--delay);
+  -moz-animation: fly 32s linear infinite;
+}
+
+@keyframes fly {
+  0% {
+    top: var(--dot-start-top);
+    left: var(--dot-start-left);
+  }
+
+  100% {
+    top: var(--dot-end-top);
+    left: var(--dot-end-left);
+  }
+
+  5%,
+  15%,
+  25%,
+  35%,
+  45%,
+  55%,
+  65%,
+  75%,
+  85%,
+  95% {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: inset 0 0 10px 2px rgba(0, 255, 182, 0.5),
+      0 0 15px 2px rgba(0, 255, 135, 1);
+  }
+
+  0%,
+  10%,
+  20%,
+  30%,
+  40%,
+  50%,
+  60%,
+  70%,
+  80%,
+  90% {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0 0 10px 2px rgba(0, 255, 182, 0.5),
+      0 0 5px 2px rgba(0, 255, 135, 0.3);
+  }
+}
+
