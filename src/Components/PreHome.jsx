@@ -1,8 +1,7 @@
 import TypesEffect from "./TypesEffect";
-// import { Link } from "react-router-dom";
+
 
 function PreHome({ SetIsClick, isClick }) {
-  console.log("start btn ke page pr",isClick)
   function toggleHandler() {
     SetIsClick(!isClick);
   }

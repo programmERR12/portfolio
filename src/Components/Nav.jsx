@@ -43,7 +43,7 @@ function Nav() {
       {menuOpen && (
         <ul className="md:hidden bg-black/70 text-white flex flex-col text-center space-y-4 py-4">
           <li onClick={() => setMenuOpen(false)} className="hover:text-green-400">
-            <Link to="main">Home</Link>
+            <Link to="/">Home</Link>
           </li>
           <li onClick={() => setMenuOpen(false)} className="hover:text-green-400">
             <Link to="projects">Projects</Link>

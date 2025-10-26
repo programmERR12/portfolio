@@ -1,7 +1,5 @@
 const projectData = [
-  {
-    gif:"https://www.gif-vif.com/trending/80s-space-invaders-retro-retro-video-games-80s-video-games-video-games-retrofiend-atari-retro-s-classic-video-games"
-  },
+
   {
    
      id: 1,
