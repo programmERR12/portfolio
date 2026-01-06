@@ -25,7 +25,7 @@ function HireMeBtn() {
           >
             <polyline points="13.18 1.37 13.18 9.64 21.45 9.64 10.82 22.63 10.82 14.36 2.55 14.36 13.18 1.37" />
           </svg>
-          <a href="http://www.linkedin.com/in/divyanshu9782" target="_blank"
+          <a href="http://www.linkedin.com/in/erdivyanshuu" target="_blank"
                 rel="noopener noreferrer" className="full-link"> Hire Me </a>
          
         </span> 
