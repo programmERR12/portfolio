@@ -22,7 +22,7 @@ function Footer() {
           </h3>
           <div className="flex justify-center md:justify-end space-x-6">
             <a
-              href="http://www.linkedin.com/in/divyanshu9782"
+              href="http://www.linkedin.com/in/erdivyanshuu"
               target="_blank"
               rel="noreferrer"
               className="hover:text-emerald-400 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"
