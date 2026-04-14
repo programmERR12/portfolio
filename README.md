@@ -14,16 +14,16 @@
 
 ## 🚀 Projects
 
-### 🔹 [Project Name]
+### 🔹 Portfolio
 
-* 📌 Description: Short description of your project
-* 🛠️ Tech Used: React, Node.js
-* 🔗 Live Demo: [Link]
+* 📌 Description: Built a responsive personal portfolio website using React to highlight my projects, technical skills, and achievements with an interactive and user-friendly design.
+* 🛠️ Tech Used:  React.js, HTML5, CSS3, JavaScript (ES6+)
+* 🔗 Live Demo: https://programmerr12.github.io/portfolio/
 
 ---
 
 
 ## 🔗 Connect With Me
 
-* 💼 LinkedIn: [Your LinkedIn Link]
+* 💼 LinkedIn: https://www.linkedin.com/in/erdivyanshuu
 * 🐙 GitHub: https://github.com/programmERR12
