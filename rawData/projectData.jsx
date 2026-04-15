@@ -25,6 +25,14 @@ const projectData = [
       "The Art Gallery is a simple yet elegant web project built using HTML and CSS. It showcases a beautiful collection of artworks arranged in a clean, grid-based layout. Each image is carefully displayed to highlight creativity and visual appeal.",
     image:"https://i.gifer.com/fxf8.gif",
     deployLink: "https://programmerr12.github.io/art-gallery/",
+  },
+  {
+  id: 3,
+    title: "ExtConverter",
+    description:
+      "Convert Documents Instantly Transform your PDFs to Word documents and Word files to PDFs with ease. Fast, secure, and completely free to use.",
+    image:"https://cdn.dribbble.com/users/1189443/screenshots/3888020/converter.gif",
+    deployLink: "https://extconverter.vercel.app/",
   }
 ];
 
