@@ -1,14 +1,13 @@
 const projectData = [
 
   {
-   
-     id: 1,
-    title: "Car service",
+      id: 1,
+    title: "ExtConverter",
     description:
-      "A landing page for a car service business featuring service cards, icons, and call-to-action buttons for bookings. Built with HTML and CSS for a clean, professional layout.",
-    image:
-      "https://media1.tenor.com/m/6NxALKivEZ8AAAAC/wallpaper-car.gif",
-    deployLink: "https://car-rental-service-psi.vercel.app",
+      "Convert Documents Instantly Transform your PDFs to Word documents and Word files to PDFs with ease. Fast, secure, and completely free to use.",
+    image:"https://cdn.dribbble.com/users/1189443/screenshots/3888020/converter.gif",
+    deployLink: "https://extconverter.vercel.app/",
+     
   },
   {
   id: 2,
@@ -27,13 +26,22 @@ const projectData = [
     deployLink: "https://programmerr12.github.io/art-gallery/",
   },
   {
-  id: 3,
-    title: "ExtConverter",
+    id: 3,
+    title: "Car service",
     description:
-      "Convert Documents Instantly Transform your PDFs to Word documents and Word files to PDFs with ease. Fast, secure, and completely free to use.",
-    image:"https://cdn.dribbble.com/users/1189443/screenshots/3888020/converter.gif",
-    deployLink: "https://extconverter.vercel.app/",
-  }
+      "A landing page for a car service business featuring service cards, icons, and call-to-action buttons for bookings. Built with HTML and CSS for a clean, professional layout.",
+    image:
+      "https://media1.tenor.com/m/6NxALKivEZ8AAAAC/wallpaper-car.gif",
+    deployLink: "https://car-rental-service-psi.vercel.app",
+  },
+ {
+  id: 4,
+  title: "Coming Soon",
+  description:
+    "Something exciting is on the way. Stay tuned!",
+  image: "https://img.freepik.com/free-vector/coming-soon-black-backgroun-design_1017-37033.jpg?semt=ais_hybrid&w=740&q=80",
+  // deployLink: "",
+}
 ];
 
 export default projectData;
